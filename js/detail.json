@@ -1,7 +1,7 @@
 [
     {
-      "image": "img/banner/1.webp",
-      "thumbnail": "img/banner/1.webp",
+      "image": "/img/banner/1.webp",
+      "thumbnail": "/img/banner/1.webp",
       "alt": "test",
       "url": "",
       "title": "タイトル1",
@@ -12,8 +12,8 @@
       "text2": "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
     },
     {
-      "image": "img/banner/2.webp",
-      "thumbnail": "img/banner/2.webp",
+      "image": "/img/banner/2.webp",
+      "thumbnail": "/img/banner/2.webp",
       "alt": "test",
       "title": "タイトル2",
       "date" : "2021-01-01",
@@ -23,8 +23,8 @@
       "text2": "説明説明説明説明説明説明説明説明説明"
     },
     {
-      "image": "img/banner/3.webp",
-      "thumbnail": "img/banner/3.webp",
+      "image": "/img/banner/3.webp",
+      "thumbnail": "/img/banner/3.webp",
       "alt": "test",
       "title": "タイトル3",
       "date" : "2021-01-01",
@@ -34,7 +34,8 @@
       "text2": "説明説明説明説明説明説明説明説明説明"
     },
     {
-      "image": "img/banner/3.webp",
+      "image": "/img/banner/3.webp",
+      "thumbnail": "/img/banner/3.webp",
       "alt": "test",
       "title": "タイトル3",
       "date" : "2021-01-01",
@@ -44,7 +45,7 @@
       "text2": "説明説明説明説明説明説明説明説明説明"
     },
     {
-      "image": "img/banner/3.webp",
+      "image": "/img/banner/3.webp",
       "alt": "test",
       "title": "タイトル3",
       "date" : "2021-01-01",
@@ -54,7 +55,7 @@
       "text2": "説明説明説明説明説明説明説明説明説明"
     },
     {
-      "image": "img/banner/2.webp",
+      "image": "/img/banner/2.webp",
       "alt": "test",
       "title": "タイトル2",
       "date" : "2021-01-01",

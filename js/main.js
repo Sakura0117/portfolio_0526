@@ -2,14 +2,13 @@ document.addEventListener(
   "DOMContentLoaded",
   function () {
     function renderJsonContent() {
-      const url = "/js/detail.json";
+      const url = "../js/detail.json";
       //json loading
       fetch(url)
         .then(function (response) {
           return response.json();
         })
         .then(function (json) {
-          //console.log(json[0].image);
           const image = document.getElementById("images");
           image.classList.add("grid-container");
           //Json loop
@@ -29,6 +28,7 @@ document.addEventListener(
             const date = document.createElement("p");
             const period = document.createElement("p");
             const thumbnail = document.createElement("img");
+            const discription = document.createElement("div");
 
             div.classList.add("grid");
             modal.setAttribute("id", "modal");
@@ -40,7 +40,6 @@ document.addEventListener(
             modalClose.classList.add("modal-close");
             thumbnail.classList.add("thumbnail-image");
             figure.setAttribute("id", "open");
-            //figure.classList.add("panel");
 
             const toggle = [figure,modalClose,modalbg];
               for(let i=0, len=toggle.length ; i<len ; i++){
@@ -61,13 +60,13 @@ document.addEventListener(
             date.innerHTML = "制作日　" + item.date;
             period.innerHTML = "工数　" + item.period;
             title.innerHTML = item.title;
+            discription.innerHTML = "説明　" + item.text;
 
             p.innerText = item.title;
             modalClose.innerText = "×";
             figure.appendChild(img);
             div.appendChild(figure);
             div.appendChild(p);
-            //div.appendChild(p);
             image.appendChild(div);
             div.appendChild(modal);
             modal.appendChild(modalbg);
@@ -78,19 +77,19 @@ document.addEventListener(
             modalcontents.appendChild(date);
             modalcontents.appendChild(period);
             modalcontents.appendChild(thumbnail);
+            modalcontents.appendChild(discription);
           });
         });
     }
 
     function renderJsonContentByCategory(category) {
-      const url = "/js/detail.json";
+      const url = "../js/detail.json";
       //json loading
       fetch(url)
         .then(function (response) {
           return response.json();
         })
         .then(function (json) {
-          //console.log(json[0].image);
           const image = document.getElementById("images");
           image.classList.add("grid-container");
           //Json loop
@@ -112,6 +111,7 @@ document.addEventListener(
               const date = document.createElement("p");
               const period = document.createElement("p");
               const thumbnail = document.createElement("img");
+              const discription = document.createElement("div");
 
               div.classList.add("grid");
               modal.setAttribute("id", "modal");
@@ -123,7 +123,7 @@ document.addEventListener(
               modalClose.classList.add("modal-close");
               thumbnail.classList.add("thumbnail-image");
               figure.setAttribute("id", "open");
-              //figure.classList.add("panel", "tab-A");
+              discription.classList.add("discription");
 
               img.src = item.image;
               img.alt = item.alt;
@@ -131,13 +131,12 @@ document.addEventListener(
               date.innerHTML = "制作日　" + item.date;
               period.innerHTML = "工数　" + item.period;
               title.innerHTML = item.title;
-
               p.innerText = item.title;
+              discription.innerHTML = "説明　" + item.text;
               modalClose.innerText = "×";
               figure.appendChild(img);
               div.appendChild(figure);
               div.appendChild(p);
-              //div.appendChild(p);
               image.appendChild(div);
               div.appendChild(modal);
               modal.appendChild(modalbg);
@@ -148,6 +147,7 @@ document.addEventListener(
               modalcontents.appendChild(date);
               modalcontents.appendChild(period);
               modalcontents.appendChild(thumbnail);
+              modalcontents.appendChild(discription);
             });
         });
     }
@@ -160,7 +160,7 @@ document.addEventListener(
       }
     }
 
-    //renderJsonContent(null);
+    renderJsonContent(null);
 
     document
       .getElementById("tab-webpage")
